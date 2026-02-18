@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marlon's Portfolio — Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Custom Cursor ──────────────────────────────────── -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── Animated Canvas Background ────────────────────── -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav>
+    <div class="logo">MPS.DEV</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#specializations">Specializations</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section id="hero">
+    <p class="hero-label"> Software Developer</p>
+
+    <h1 class="hero-name">
+      <span class="glitch">Marlon</span><br>
+      Sinadjan<span>.</span>
+    </h1>
+
+    <p class="hero-role">
+      Specializing in <span class="typed" id="typed"></span>
+    </p>
+
+    <p class="hero-desc">
+      I build high-converting WooCommerce stores and custom WordPress solutions —
+      from theme and plugin development to marketing integrations
+      and performance optimization that drive real revenue.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects →</a>
+      <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────────────── -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">// 01 &nbsp; ABOUT_ME</span>
+      <h2 class="section-title">Who I <span>Am</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Hello! I’m <strong>Marlon</strong>, a Full Stack Developer working on an active eCommerce platform for our retail business,
+          specializing in <strong>WordPress & WooCommerce development</strong>. I focus on building, maintaining, and scaling our online store with reliable, performance-driven solutions aligned with day-to-day retail operations
+        </p>
+        <p>
+          My work covers the full eCommerce lifecycle—from <strong>custom theme enhancements</strong> and plugin implementations to 
+          <strong>payment gateway integrations</strong>, promotions setup, and catalog management.
+           I continuously optimize the store for speed, SEO, usability, and conversion to support ongoing sales and marketing initiatives.
+        </p>
+        <p>
+          Delivered successful retail-focused eCommerce implementations for supermarkets and department stores,
+           including managing promotions, merchandising, and large product catalogs with thousands of SKUs.
+        </p>
+        <a href="#" class="btn btn-ghost" style="margin-top: 1rem; display: inline-flex;">
+          Download CV →
+        </a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">1+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Stores Launched(Multisite)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Plugins Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$2M+</div>
+          <div class="stat-label">Company Revenue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ─────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="section-header" style="max-width: 1200px; margin: 0 auto 4rem;">
+      <span class="section-num">// 02 &nbsp; SKILLS</span>
+      <h2 class="section-title">Tech <span>Stack</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-grid" style="max-width: 1200px; margin: 0 auto;">
+
+      <div class="skill-category">
+        <span class="cat-icon">🛒</span>
+        <div class="cat-name">WooCommerce</div>
+        <div class="skill-tags">
+          <span class="tag">WooCommerce Core</span>
+          <span class="tag">Custom Extensions</span>
+          <span class="tag">Product Types</span>
+          <span class="tag">Cart & Checkout</span>
+          <span class="tag">Order Management</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Order Processing</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <span class="cat-icon">🎨</span>
+        <div class="cat-name">WordPress Development</div>
+        <div class="skill-tags">
+          <span class="tag">Custom Themes</span>
+          <span class="tag">Block Editor</span>
+          <span class="tag">Plugin Dev</span>
+          <span class="tag">Custom Post Types</span>
+          <span class="tag">ACF / Meta Fields</span>
+          <span class="tag">Multisite</span>
+          <span class="tag">Flatsome UX Builder</span>
+          <span class="tag">Abandoned Cart / Marketing Campaigns</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <span class="cat-icon">⚡</span>
+        <div class="cat-name">Frontend & Stack</div>
+        <div class="skill-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Java</span>
+          <span class="tag">HTML/ SCSS / CSS3</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <span class="cat-icon">🐧</span>
+        <div class="cat-name">Linux & Automation</div>
+        <div class="skill-tags">
+          <span class="tag">Linux / Bash</span>
+          <span class="tag">Shell Scripting</span>
+          <span class="tag">Cron Jobs</span>
+          <span class="tag">API Automation</span>
+          <span class="tag">SSH / SFTP</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <span class="cat-icon">🚀</span>
+        <div class="cat-name">Performance & SEO</div>
+        <div class="skill-tags">
+          <span class="tag">Apache2 + Nginx setup </span>
+          <span class="tag">Google Analytics</span>
+          <span class="tag">Caching (Server Side, Redis & LiteSpeed Page Cache)</span>
+          <span class="tag">Rank Math SEO</span>
+          <span class="tag">Image Optimization</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <span class="cat-icon">🔧</span>
+        <div class="cat-name">DevOps & Hosting</div>
+        <div class="skill-tags">
+          <span class="tag">Cloudflare</span>
+          <span class="tag">AWS / DigitalOcean</span>
+          <span class="tag">Oracle Cloud Infrastructure</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SPECIALIZATIONS ────────────────────────────────── -->
+  <section id="specializations">
+    <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
+      <div class="section-header">
+        <span class="section-num">// 03 &nbsp; WHAT_I_DO</span>
+        <h2 class="section-title">eCommerce <span>focused</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="spec-grid">
+
+        <div class="spec-card">
+          <span class="spec-icon">🏪</span>
+          <h3 class="spec-title">Store Setup & Migration</h3>
+          <p class="spec-desc">
+            Full WooCommerce store setup from scratch, or seamless migration from One Cloud server,
+            to another.
+          </p>
+        </div>
+
+        <div class="spec-card">
+          <span class="spec-icon">🧩</span>
+          <h3 class="spec-title">Custom Plugin Development</h3>
+          <p class="spec-desc">
+            WooCommerce extensions tailored to business logic — custom product types,
+            pricing rules, checkout flows, and more.
+          </p>
+        </div>
+
+        <div class="spec-card">
+          <span class="spec-icon">🎨</span>
+          <h3 class="spec-title">Theme Development</h3>
+          <p class="spec-desc">
+            Custom WordPress themes built from child themes —
+            fast, accessible, and optimized in desktop and mobile.
+          </p>
+        </div>
+
+        <div class="spec-card">
+          <span class="spec-icon">⚡</span>
+          <h3 class="spec-title">Speed & SEO Optimization</h3>
+          <p class="spec-desc">
+            Transform WooCommerce stores into speedy experiences with Redis caching,
+            Server side caching, Core Web Vitals tuning, and structured data.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────── -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">// 04 &nbsp; PROJECTS</span>
+      <h2 class="section-title">Featured <span>Work</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <span class="project-num">PROJECT_01</span>
+        <div class="project-title-row">
+          <h3 class="project-name">Inventory Automation Script</h3>
+          <span class="private-badge">⚿ Private</span>
+        </div>
+        <p class="project-desc">
+          A Linux-based automation script that syncs and updates product inventory across a WooCommerce
+          store in real time — handling stock levels, low-stock alerts, automatic reorder flags,
+          and CSV/Excel imports via cron jobs.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Linux / Bash</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">WooCommerce REST API</span>
+          <span class="tech-badge">Cron Jobs</span>
+          <span class="tech-badge">MySQL</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link muted">⚿ Repository is Private</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-num">PROJECT_02</span>
+        <div class="project-title-row">
+          <h3 class="project-name">FoodPanda Vendor Automation</h3>
+          <span class="private-badge">⚿ Private</span>
+        </div>
+        <p class="project-desc">
+          A Linux-based automation pipeline for Food Panda merchant accounts — handling real-time product
+          inventory between RMS and Food Panda Portal, stock availability , prices for regular and promotional campaigns.
+        </p>
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Linux / Bash</span>
+          <span class="tech-badge">Java/PHP</span>
+          <span class="tech-badge">FoodPanda SFTP</span>
+          <span class="tech-badge">Cron Jobs</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link muted">⚿ Repository is Private</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-num">PROJECT_03</span>
+        <div class="project-title-row">
+          <h3 class="project-name">Grab Vendor Automation</h3>
+          <span class="private-badge">⚿ Private</span>
+        </div>
+        <p class="project-desc">
+          A Linux-based automation pipeline for Grab merchant accounts — handling real-time product
+          inventory between RMS and Grab Portal, stock availability , prices for regular and promotional campaigns.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Linux / Bash</span>
+          <span class="tech-badge">Java/PHP</span>
+          <span class="tech-badge">Grab Merchant SFTP</span>
+          <span class="tech-badge">RMS Oracle</span>
+          <span class="tech-badge">Cron Jobs</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link muted">⚿ Repository is Private</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">// 05 &nbsp; CONTACT</span>
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-inner">
+      <div class="contact-info">
+        <p>
+          Want to say hello and offer me oppurtunities?
+          My inbox is always open — I'll get back to you promptly!
+        </p>
+        <div class="contact-links">
+          <a href="/cdn-cgi/l/email-protection#136a7c666153767e727a7f3d707c7e" class="contact-link">
+            <span class="link-icon">✉</span>
+            <span class="__cf_email__" data-cfemail="6e17011b1c2e0b030f0702400d0103">sinadjanbit2@gmail.com</span>
+          </a>
+          <a href="https://github.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+            <span class="link-icon">⌥</span>
+            github.com/yourusername
+          </a>
+          <a href="https://linkedin.com/in/yourname" class="contact-link" target="_blank" rel="noopener">
+            <span class="link-icon">in</span>
+            linkedin.com/in/yourname
+          </a>
+        </div>
+      </div>
+
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me about your offer..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer>
+    <p>Built by <span>Marlon P. Sinadjan</span> &nbsp;|&nbsp; 2026</p>
+  </foot
