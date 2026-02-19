@@ -103,11 +103,11 @@ drawCanvas();
 
 /* ── Typed Text Effect ────────────────────────────────────── */
 const phrases = [
-  'WooCommerce stores.',
-  'custom WordPress themes.',
-  'payment integrations.',
-  'eCommerce solutions.',
-  'conversion-focused UX.',
+  'WooCommerce Systems Engineer.',
+  'Retail Integration Specialist.',
+  'Inventory Automation Engineer.',
+  'eCommerce Infrastructure Builder.',
+  'Backend Automation Developer.',
 ];
 
 let phraseIndex = 0;
