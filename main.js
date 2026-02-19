@@ -104,7 +104,6 @@ drawCanvas();
 /* ── Typed Text Effect ────────────────────────────────────── */
 const phrases = [
   'WooCommerce Systems Engineer.',
-  'Retail Integration Specialist.',
   'Inventory Automation Engineer.',
   'eCommerce Infrastructure Builder.',
   'Backend Automation Developer.',
