@@ -1,7 +1,13 @@
 /* ============================================================
-   PORTFOLIO 
-   main.js
+   PORTFOLIO — main.js
    ============================================================ */
+
+/* ── Make all reveal elements visible immediately on load ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll(
+    '.section-header, .skill-category, .project-card, .spec-card'
+  ).forEach(el => el.classList.add('visible'));
+});
 
 /* ── Custom Cursor ────────────────────────────────────────── */
 const cursor = document.getElementById('cursor');
@@ -57,45 +63,33 @@ const particles = Array.from({ length: 80 }, () => ({
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  /* Grid lines */
   ctx.strokeStyle = 'rgba(26, 37, 64, 0.4)';
   ctx.lineWidth   = 0.5;
   const gs = 80;
 
   for (let x = 0; x < canvas.width; x += gs) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, canvas.height);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
   }
   for (let y = 0; y < canvas.height; y += gs) {
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(canvas.width, y);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
   }
 
-  /* Particles */
   particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
+    p.x += p.vx; p.y += p.vy;
     if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
     ctx.fillStyle = 'rgba(0, 240, 255, 0.6)';
     ctx.fill();
   });
 
-  /* Connection lines between nearby particles */
   particles.forEach((a, i) => {
     particles.slice(i + 1).forEach(b => {
       const d = Math.hypot(a.x - b.x, a.y - b.y);
       if (d < 120) {
         ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
+        ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
         ctx.strokeStyle = `rgba(0, 240, 255, ${0.12 * (1 - d / 120)})`;
         ctx.lineWidth   = 0.5;
         ctx.stroke();
@@ -116,14 +110,13 @@ const phrases = [
   'conversion-focused UX.',
 ];
 
-let phraseIndex  = 0;
-let charIndex    = 0;
-let isDeleting   = false;
-const typedEl    = document.getElementById('typed');
+let phraseIndex = 0;
+let charIndex   = 0;
+let isDeleting  = false;
+const typedEl   = document.getElementById('typed');
 
 function typeEffect() {
   const phrase = phrases[phraseIndex];
-
   if (!isDeleting) {
     typedEl.textContent = phrase.slice(0, ++charIndex);
     if (charIndex === phrase.length) {
@@ -134,40 +127,25 @@ function typeEffect() {
   } else {
     typedEl.textContent = phrase.slice(0, --charIndex);
     if (charIndex === 0) {
-      isDeleting   = false;
-      phraseIndex  = (phraseIndex + 1) % phrases.length;
+      isDeleting  = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
     }
   }
-
   setTimeout(typeEffect, isDeleting ? 50 : 90);
 }
 typeEffect();
 
-/* ── Scroll Reveal ────────────────────────────────────────── */
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 100);
-    }
-  });
-}, { threshold: 0.1 });
+/* ── Optional scroll animation (enhancement only) ────────── */
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05 });
 
-document
-  .querySelectorAll('.section-header, .skill-category, .project-card, .spec-card')
-  .forEach(el => revealObserver.observe(el));
-
-/* ── Contact Form Submit ──────────────────────────────────── */
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-
-  btn.textContent        = 'Sent! ✓';
-  btn.style.background   = 'rgba(0, 240, 255, 0.1)';
-  btn.style.color        = 'var(--accent)';
-
-  setTimeout(() => {
-    btn.textContent      = 'Send Message →';
-    btn.style.background = '';
-    btn.style.color      = '';
-  }, 3000);
+  document.querySelectorAll('.skill-category, .project-card, .spec-card')
+    .forEach(el => observer.observe(el));
 }
