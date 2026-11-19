@@ -196,8 +196,8 @@
         '<input id="ask-input" type="text" maxlength="200" placeholder="Ask about skills, projects, availability…">' +
         '<button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>' +
       '</section>' +
-      '<button class="ask-launcher" type="button" aria-expanded="false" aria-controls="ask-panel">' +
-        '<img src="' + avatarSrc + '" alt="" width="56" height="56"><span class="ask-online" aria-hidden="true"></span><span class="ask-label">Ask Marlon</span></button>';
+      '<button class="ask-launcher" type="button" aria-expanded="false" aria-controls="ask-panel" aria-label="Hi, I&#39;m Marlon. Ask me anything! Open chat">' +
+        '<img src="' + avatarSrc + '" alt="" width="56" height="56"><span class="ask-online" aria-hidden="true"></span><span class="ask-label"><strong>Hi, I&#39;m Marlon</strong><small>Ask me anything!</small></span></button>';
     document.body.appendChild(root);
 
     const launcher = root.querySelector('.ask-launcher');

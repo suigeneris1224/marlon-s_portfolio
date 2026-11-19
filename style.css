@@ -422,6 +422,9 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -.035em; line-height: 
 .ask-launcher img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; object-position: 55% 12%; background: var(--blue-soft); border: 2px solid #fff; }
 .ask-online { position: absolute; left: 44px; bottom: 6px; width: 13px; height: 13px; border-radius: 50%; background: var(--green); border: 2px solid var(--ink); }
 .ask-launcher:not(.no-wave) img { animation: ask-wave 3.2s ease-in-out 2s 2; }
+.ask-label { display: grid; line-height: 1.2; text-align: left; }
+.ask-label strong { font: 700 14px var(--display); }
+.ask-label small { font-size: 12px; font-weight: 500; color: #c8d4ea; }
 .ask.is-open .ask-label { display: none; }
 .ask.is-open .ask-launcher { padding-right: 4px; }
 @keyframes ask-wave { 0%, 100% { transform: rotate(0); } 10% { transform: rotate(-10deg); } 20% { transform: rotate(8deg); } 30% { transform: rotate(-6deg); } 40% { transform: rotate(0); } }
