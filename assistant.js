@@ -188,13 +188,13 @@
     const root = el('div', 'ask');
     root.innerHTML =
       '<div class="ask-bubble" hidden><button class="ask-bubble-close" type="button" aria-label="Dismiss">×</button><p>Hi! Ask me anything about my work 👋</p></div>' +
-      '<section class="ask-panel" id="ask-panel" role="dialog" aria-label="Chat with Marlon\'s assistant" hidden>' +
-        '<header class="ask-head"><img src="' + avatarSrc + '" alt="" width="40" height="40"><div><strong>Marlon\'s Assistant</strong><span>Automated replies from my portfolio</span></div>' +
+      '<section class="ask-panel" id="ask-panel" role="dialog" aria-label="Chat with Marlon (automated replies)" hidden>' +
+        '<header class="ask-head"><img src="' + avatarSrc + '" alt="" width="40" height="40"><div><strong>Hi, I&#39;m Marlon</strong><span>Ask me anything!</span></div>' +
         '<button class="ask-close" type="button" aria-label="Close chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></header>' +
         '<div class="ask-log" role="log" aria-live="polite"></div>' +
         '<form class="ask-form" autocomplete="off"><label class="sr-only" for="ask-input">Ask a question</label>' +
         '<input id="ask-input" type="text" maxlength="200" placeholder="Ask about skills, projects, availability…">' +
-        '<button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>' +
+        '<button type="submit" aria-label="Send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form><p class="ask-note">Automated replies based on my portfolio &amp; résumé</p>' +
       '</section>' +
       '<button class="ask-launcher" type="button" aria-expanded="false" aria-controls="ask-panel" aria-label="Hi, I&#39;m Marlon. Ask me anything! Open chat">' +
         '<img src="' + avatarSrc + '" alt="" width="56" height="56"><span class="ask-online" aria-hidden="true"></span><span class="ask-label"><strong>Hi, I&#39;m Marlon</strong><small>Ask me anything!</small></span></button>';

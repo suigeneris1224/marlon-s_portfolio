@@ -474,6 +474,7 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -.035em; line-height: 
 .ask-form button { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 0; border-radius: 50%; background: var(--blue); color: #fff; cursor: pointer; }
 .ask-form button:hover { background: var(--blue-dark); }
 .ask-form svg { width: 20px; height: 20px; }
+.ask-note { margin: 0; padding: 0 12px 10px; background: #fff; color: var(--muted); font-size: 11.5px; text-align: center; }
 
 @media (max-width: 720px) {
   .ask { right: 14px; bottom: 14px; }
