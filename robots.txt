@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_design/
+
+Sitemap: https://suigeneris1224.github.io/marlon-s_portfolio/sitemap.xml
