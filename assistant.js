@@ -70,37 +70,37 @@
     {
       id: 'projects', q: 'Show me your projects',
       keywords: ['project', 'projects', 'portfolio', 'work samples', 'case study', 'case studies', 'built', 'build', 'show me', 'examples', 'products'],
-      answer: "Here's what I've worked on:<br><b>Company</b><br>• <a href=\"{B}projects/shopmetro.html\">ShopMetro</a>: multi-store WooCommerce<br>• <a href=\"{B}projects/marengems.html\">Marengems</a>: storefront + Laravel OMS<br>• <a href=\"{B}projects/captive-portal-crm.html\">Captive Portal CRM</a>: Vue + Laravel<br><b>Personal</b><br>• <a href=\"{B}projects/layerflow.html\">LayerFlow</a>: farm management SaaS<br>• <a href=\"{B}projects/pairnest.html\">Pairnest</a>: budgeting app",
+      answer: "Here's what I've worked on:<br><b>Company</b><br>• <a href=\"{B}projects/shopmetro\">ShopMetro</a>: multi-store WooCommerce<br>• <a href=\"{B}projects/marengems\">Marengems</a>: storefront + Laravel OMS<br>• <a href=\"{B}projects/captive-portal-crm\">Captive Portal CRM</a>: Vue + Laravel<br><b>Personal</b><br>• <a href=\"{B}projects/layerflow\">LayerFlow</a>: farm management SaaS<br>• <a href=\"{B}projects/pairnest\">Pairnest</a>: budgeting app",
       followUps: ['shopmetro', 'layerflow', 'pairnest']
     },
     {
       id: 'shopmetro', q: 'Tell me about ShopMetro',
       keywords: ['!shopmetro', '!shop metro', 'metro', 'supermarket', 'department store', 'multi store', 'retail platform'],
-      answer: "<b>ShopMetro</b> is an enterprise retail platform: one WordPress Multisite + WooCommerce setup powering four storefronts (Supermarket, Department Store, Metro EGC, Food Avenue). I build custom plugins, RMS inventory automation and integrations, and handle SEO, app releases and production on OCI.<br><a href=\"{B}projects/shopmetro.html\">View case study →</a>",
+      answer: "<b>ShopMetro</b> is an enterprise retail platform: one WordPress Multisite + WooCommerce setup powering four storefronts (Supermarket, Department Store, Metro EGC, Food Avenue). I build custom plugins, RMS inventory automation and integrations, and handle SEO, app releases and production on OCI.<br><a href=\"{B}projects/shopmetro\">View case study →</a>",
       followUps: ['integrations', 'woocommerce', 'marengems']
     },
     {
       id: 'marengems', q: 'Tell me about Marengems',
       keywords: ['!marengems', 'maren', 'gems', 'jewelry', 'jewellery'],
-      answer: "<b>Marengems</b> connects a WooCommerce storefront to a <b>Laravel Order Management System</b> over REST APIs. I maintained the OMS and its integration, took part in the AWS → OCI migration, and deployed the storefront with SSL on an OCI Load Balancer.<br><a href=\"{B}projects/marengems.html\">View case study →</a>",
+      answer: "<b>Marengems</b> connects a WooCommerce storefront to a <b>Laravel Order Management System</b> over REST APIs. I maintained the OMS and its integration, took part in the AWS → OCI migration, and deployed the storefront with SSL on an OCI Load Balancer.<br><a href=\"{B}projects/marengems\">View case study →</a>",
       followUps: ['laravel', 'cloud', 'crm']
     },
     {
       id: 'crm', q: 'What is the Captive Portal CRM?',
       keywords: ['!captive portal', '!crm', 'wifi', 'wi fi', 'customer data', 'marketing', 'campaign', 'segmentation'],
-      answer: "An internal Metro Retail system (in development) for managing captive-portal customer data and marketing workflows. I'm building the <b>Vue.js</b> frontend and <b>Laravel</b> backend, and supporting the <b>Retainful</b> integration. Customer data is intentionally not shown.<br><a href=\"{B}projects/captive-portal-crm.html\">View case study →</a>",
+      answer: "An internal Metro Retail system (in development) for managing captive-portal customer data and marketing workflows. I'm building the <b>Vue.js</b> frontend and <b>Laravel</b> backend, and supporting the <b>Retainful</b> integration. Customer data is intentionally not shown.<br><a href=\"{B}projects/captive-portal-crm\">View case study →</a>",
       followUps: ['laravel', 'projects']
     },
     {
       id: 'layerflow', q: 'Tell me about LayerFlow',
       keywords: ['!layerflow', '!layer flow', 'poultry', 'farm', 'farmer', 'egg', 'eggs', 'chicken', 'saas'],
-      answer: "<b>LayerFlow</b> is my own SaaS for Philippine layer (egg) farmers: flock, production, feed, sales and reports. I built it solo from idea to launch with <b>Next.js</b>, <b>Supabase</b> and <b>Cloudflare</b>, plus the SEO. It's live at <a href=\"https://getlayerflow.com\" target=\"_blank\" rel=\"noopener\">getlayerflow.com</a>.<br><a href=\"{B}projects/layerflow.html\">View case study →</a>",
+      answer: "<b>LayerFlow</b> is my own SaaS for Philippine layer (egg) farmers: flock, production, feed, sales and reports. I built it solo from idea to launch with <b>Next.js</b>, <b>Supabase</b> and <b>Cloudflare</b>, plus the SEO. It's live at <a href=\"https://getlayerflow.com\" target=\"_blank\" rel=\"noopener\">getlayerflow.com</a>.<br><a href=\"{B}projects/layerflow\">View case study →</a>",
       followUps: ['pairnest', 'seo', 'available']
     },
     {
       id: 'pairnest', q: 'Tell me about Pairnest',
       keywords: ['!pairnest', '!pair nest', 'budget', 'budgeting', 'couple', 'couples', 'expense', 'finance', 'money'],
-      answer: "<b>Pairnest</b> is a budgeting and expense-tracking app for couples that I'm building: shared budgets, expenses and financial goals. It's a <b>Flutter</b> app (iOS &amp; Android) with a <b>Laravel</b> REST backend.<br><a href=\"{B}projects/pairnest.html\">View case study →</a>",
+      answer: "<b>Pairnest</b> is a budgeting and expense-tracking app for couples that I'm building: shared budgets, expenses and financial goals. It's a <b>Flutter</b> app (iOS &amp; Android) with a <b>Laravel</b> REST backend.<br><a href=\"{B}projects/pairnest\">View case study →</a>",
       followUps: ['mobile', 'layerflow']
     },
     {
