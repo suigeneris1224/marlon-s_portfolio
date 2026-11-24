@@ -88,7 +88,7 @@
     {
       id: 'crm', q: 'What is the Captive Portal CRM?',
       keywords: ['!captive portal', '!crm', 'wifi', 'wi fi', 'customer data', 'marketing', 'campaign', 'segmentation'],
-      answer: "An internal Metro Retail system (in development) for managing captive-portal customer data and marketing workflows. I'm building the <b>Vue.js</b> frontend and <b>Laravel</b> backend, and supporting the <b>Retainful</b> integration. Customer data is intentionally not shown.<br><a href=\"{B}projects/captive-portal-crm\">View case study →</a>",
+      answer: "An internal Metro Retail system, deployed on the company network, for managing captive-portal customer data and marketing workflows. I built the <b>Vue.js</b> frontend and <b>Laravel</b> backend, and supporting the <b>Retainful</b> integration. Customer data is intentionally not shown.<br><a href=\"{B}projects/captive-portal-crm\">View case study →</a>",
       followUps: ['laravel', 'projects']
     },
     {
